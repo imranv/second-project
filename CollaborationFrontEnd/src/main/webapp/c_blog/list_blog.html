@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<body>
+<div ng-controller="BlogController as bd" >
+<a href="#" ng-repeat="blog in bd.blogs"><li ng-click="bd.getSelectedBlog(blog.id)">BLOG_TITLE:{{blog.title}} WRITTEN BY:{{blog.userID}}</li></a>
+
+</div>
+
+</body>
+</html>

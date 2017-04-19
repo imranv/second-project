@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="JobController as ctrl" >
+ 
+ <input ng-model="pen" type="text">
+ <div class="table" ng-repeat="jo in ctrl.jobs|filter:pen">
+
+
+JOB_TITLE : {{jo.title}}
+<br/>
+
+DESCRIPTION :{{jo.description}}
+<br/>
+
+INTERVIEW_DATE :{{jo.interviewdate}}
+<br/>
+
+QUALIFICATION :{{jo.qualification}}
+<br/>
+
+STATUS :{{jo.status}}
+<br/>
+<td><button ng-click="ctrl.submit1(jo.id)" type="submit">Apply</button></td>
+ </div>
+<hr/> 
+<br/><br/><br/>
+ </div>
+</body>
+</html>

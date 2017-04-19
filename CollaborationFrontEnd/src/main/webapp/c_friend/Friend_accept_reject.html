@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="FriendController as ctrl ">
+<table>
+<tr>
+<td>FRIENDNAME
+</td>
+
+<td>USERNAME
+</td>
+
+<td>ONLINE
+</td>
+<td>STATUS
+</td>
+</tr>
+<tr ng-repeat="friend in ctrl.friendRequests">
+<td> {{friend.friendID}}</td>
+<td> {{friend.userID}}</td>
+<td> {{friend.isOnline}}</td>
+<td> {{friend.status}}</td>
+<td><button  class="btn btn-primary" ng-click="ctrl.acceptfriend(friend.userID)" type="submit">ACCEPT</button></td>
+<td><button  class="btn btn-success" ng-click="ctrl.rejectfriend(friend.userID)" type="submit">REJECT</button></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

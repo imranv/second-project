@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+<div class="container" ng-controller="FriendController as ctrl">
+<div class ="row">
+<div class = "col-md-5">
+<form role="form">
+<div class= "input-group">
+<input type = "text" placeholder="search_friend" ng-model="search_friend" class="form-control"/>
+<div class="input-group-btn">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<br><br><br>
+     <p>
+     <p>
+     <p>
+     <p>
+     
+     <p>
+     <p>
+     <p>
+     <p>
+     
+     <div class="form-group has-feedback"></div>
+     
+
+     
+     
+         <div ng-repeat="user in ctrl.users | filter: sear_text" ng-hide="user.id==currentUser.id" && ng-hide="currentUser.role=='admin'">
+         
+             
+                
+                  
+                  <b> Online ?:</b>
+                   {{user.isOnline}}
+                   <br/>
+                   <b>ID:</b>
+                    {{user.id}} 
+                    <br/>
+                   <b>Name:</b>
+                    {{user.name}}
+                    <br/>
+                      
+                    
+                    
+                   <b>Email:</b>
+                    {{user.email}}  
+                    <br/>
+                    <b>Mobile:</b>
+                    {{user.mob_no}}
+                   <br/>
+                   <b>Gender:</b>
+                   {{user.gender}} 
+                   <br/>
+                   <b>Role:</b>
+                   {{user.role}}
+                   <br/>
+                   <div class="col-md-2"></div>
+                
+                 <div class="col-md-10" ><button type="button" ng-click="ctrl.sendFriendRequest(user.id)" 
+                                                      
+                       class="btn btn-warning btn-sm" ng-hide="ctrl.sendRequestCount">Send Friend Request</button>
+             </div>
+          </div>
+          </div>
+          </body></html>
+                     

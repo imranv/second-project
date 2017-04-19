@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div ng-controller="UserController as ctrl" >
+
+<div class="container">
+  <h2>List of Users</h2>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>CONTACT</th>
+        <th>STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="success" ng-repeat="x in ctrl.users">
+     
+   
+       <td>{{x.name}}</td>
+        
+      <td>{{x.email}}</td>
+      
+       <td>{{x.contact}}</td>
+       
+      
+        <td>{{x.status}}</td>
+        
+        <td><button type="submit">ACCEPT</button></td>
+<td><button type="submit">REJECT</button></td>
+</tr>
+
+    
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>
+
+
